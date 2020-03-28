@@ -41,6 +41,9 @@ RUN $INSTALL_SCRIPTS/no_vnc.sh
 RUN $INSTALL_SCRIPTS/xfce_ui.sh
 COPY ./src/xfce/ $HOME/
 
+### Install NodeJS
+RUN $INSTALL_SCRIPTS/install_nodejs.sh
+
 ### configure startup
 RUN $INSTALL_SCRIPTS/libnss_wrapper.sh
 COPY ./src/startup $STARTUPDIR
