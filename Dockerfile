@@ -49,7 +49,7 @@ RUN $INSTALL_SCRIPTS/libnss_wrapper.sh
 COPY ./src/startup $STARTUPDIR
 RUN $INSTALL_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME $WORKHOME
 
-USER 1000
+# USER 1000
 
 ENTRYPOINT ["/docker/startup/vnc_startup.sh"]
 CMD ["--wait"]
